@@ -3,7 +3,7 @@ resources:
 - name: attendee-service
   type: git
   source:
-    uri: https://github.com/mysrini/pcf-attendee-service-code.git   #<----- REPLACE ME
+    uri: https://github.com/mysrini/pcf-attendee-service-code.git   
     branch: concourse_deployment
 
 - name: deploy-attendee-service
