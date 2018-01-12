@@ -36,6 +36,6 @@ jobs:
   - get: attendee-service
     trigger: true
   - task: test
-    file: attendee-service-source/ci/tasks/test.yml
+    file: attendee-service/ci/tasks/test.yml
 
 
