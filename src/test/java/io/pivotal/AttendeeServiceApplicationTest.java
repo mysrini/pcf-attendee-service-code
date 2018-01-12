@@ -77,7 +77,7 @@ public class AttendeeServiceApplicationTest {
         DocumentContext parsedResponse = JsonPath.parse(attendeeListJSON);
 
         List<Object> attendees = parsedResponse.read("$._embedded.attendees");
-        assertThat(attendees.size(), equalTo(1));
+        assertThat(attendees.size(), equalTo(2));
 
         String firstName = parsedResponse.read("$._embedded.attendees[0].firstName");
         String lastName = parsedResponse.read("$._embedded.attendees[0].lastName");
