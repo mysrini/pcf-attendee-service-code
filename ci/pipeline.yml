@@ -32,7 +32,7 @@ jobs:
 - name: test
   public: true
   plan:
-  - get: attendee-service
+  - get: deploy-attendee-service
     trigger: true
   - task: test
     file: attendee-service-source/ci/tasks/test.yml
