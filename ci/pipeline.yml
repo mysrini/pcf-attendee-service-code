@@ -20,7 +20,7 @@ jobs:
 - name: build
   public: true
   plan:
-  - get: attendee-service
+  - get: test-attendee-service
     trigger: true
   - task: package
     file: attendee-service/ci/tasks/package.yml
@@ -32,8 +32,9 @@ jobs:
 - name: test
   public: true
   plan:
-  - get: deploy-attendee-service
+  - get: attendee-service
     trigger: true
   - task: test
     file: attendee-service-source/ci/tasks/test.yml
+  - put: test-attendee-service
 
